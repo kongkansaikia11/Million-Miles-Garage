@@ -1,18 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        /* h1 scales based on screen width (8% of width) but stays between 28px and 48px */
+        h1 {
+            text-align: center;
+            font-size: clamp(28px, 8vw, 48px);
+            margin-bottom: 10px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.1rem; /* Slightly larger than default for readability */
+            color: #555;
+        }
+
+        .phone-link {
+            font-size: 26px; /* Increased for easy thumb-tapping */
+            font-weight: bold;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: #007bff;
+            margin-top: 20px;
+            padding: 15px;
+            border: 2px solid #007bff;
+            border-radius: 8px; /* Makes it look like a clickable button */
+        }
+    </style>
 </head>
 <body>
-    <h1 style="text-align:center;">MILLION MILES GARAGE</h1>
-    <p style="text-align:center;">VIP Chowk, near Guwahati Airport</p>
-    <p style="text-align:center;">Click the number below to call:</p>
 
-    <a href="tel:+916002484970" style="font-size:22px; font-weight:bold; display:block; text-align:center;">
-    +91-60024-84970
-</a>
+    <h1>MILLION MILES GARAGE</h1>
+    <p>VIP Chowk, near Guwahati Airport</p>
+    <p>Click the number below to call:</p>
+
+    <a href="tel:+91600284970" class="phone-link">
+        +91-60024-84970
+    </a>
 
 </body>
 </html>
-
