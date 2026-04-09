@@ -1,18 +1,138 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Million Miles Garage | Guwahati</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-bg: #1a1a1a;
+            --accent-color: #e63946; /* Professional Red */
+            --text-light: #f1f1f1;
+            --button-green: #2ecc71;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--main-bg);
+            color: var(--text-light);
+            text-align: center;
+        }
+
+        .container {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Headline 1 Styling */
+        .brand-name {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            margin-top: 20px;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .creative-image {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        /* Headline 2 Styling */
+        .phone-section {
+            margin: 25px 0;
+            width: 100%;
+        }
+
+        .phone-number {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .call-btn {
+            background-color: var(--button-green);
+            color: white;
+            text-decoration: none;
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            display: inline-block;
+            transition: transform 0.2s;
+            box-shadow: 0 4px 10px rgba(46, 204, 113, 0.3);
+        }
+
+        .call-btn:active {
+            transform: scale(0.95);
+        }
+
+        /* Headline 3 Styling */
+        .location-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 20px;
+            width: 90%;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .address {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #ccc;
+        }
+
+        .map-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            display: inline-block;
+            border-bottom: 1px solid var(--accent-color);
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 20px;
+            font-size: 0.8rem;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
-    <h1 style="text-align:center;">MILLION MILES GARAGE</h1>
-    <p style="text-align:center;">VIP Chowk, near Guwahati Airport</p>
-    <p style="text-align:center;">Click the number below to call:</p>
 
-    <a href="tel:+91600284970" style="font-size:22px; font-weight:bold; display:block; text-align:center;">
-    +91-60024-84970
-</a>
+    <div class="container">
+        <h1 class="brand-name">Million Miles Garage</h1>
+        <div class="phone-section">
+            <span class="phone-number">600 248 4970</span>
+            <a href="tel:6002484970" class="call-btn">📞 CALL NOW</a>
+        </div>
+
+        <div class="location-box">
+            <p class="address">
+                <strong>VIP Chowk</strong><br>
+                Near Guwahati Airport<br>
+                Pincode 781015
+            </p>
+            <a href="https://maps.app.goo.gl/tPfnAWZeTJoYWcKQ8" class="map-link">📍 Open in Google Maps</a>
+        </div>
+
+        <footer>
+            &copy; 2026 Million Miles Garage | Professional Car Diagnostics
+        </footer>
+    </div>
 
 </body>
 </html>
-
