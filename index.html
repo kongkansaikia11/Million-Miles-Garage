@@ -10,7 +10,8 @@
             --main-bg: #1a1a1a;
             --accent-color: #e63946; /* Professional Red */
             --text-light: #f1f1f1;
-            --button-green: #2ecc71;
+            --button-green: #2ecc71; /* Call Button */
+            --whatsapp-green: #25d366; /* Official WhatsApp Green */
             --card-bg: rgba(255, 255, 255, 0.05);
         }
 
@@ -40,7 +41,7 @@
             letter-spacing: 2px;
         }
 
-        /* Phone Section */
+        /* Phone & Action Section */
         .phone-section {
             margin: 25px 0;
             width: 100%;
@@ -50,23 +51,39 @@
             font-family: 'Orbitron', sans-serif;
             font-size: 1.5rem;
             display: block;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
-        .call-btn {
-            background-color: var(--button-green);
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .call-btn, .whatsapp-btn {
             color: white;
             text-decoration: none;
-            padding: 18px 40px;
-            font-size: 1.2rem;
+            padding: 15px 30px;
+            font-size: 1.1rem;
             font-weight: bold;
             border-radius: 50px;
             display: inline-block;
             transition: transform 0.2s;
+            min-width: 160px;
+        }
+
+        .call-btn {
+            background-color: var(--button-green);
             box-shadow: 0 4px 10px rgba(46, 204, 113, 0.3);
         }
 
-        .call-btn:active {
+        .whatsapp-btn {
+            background-color: var(--whatsapp-green);
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+        }
+
+        .call-btn:active, .whatsapp-btn:active {
             transform: scale(0.95);
         }
 
@@ -102,7 +119,7 @@
             margin-bottom: 0;
         }
 
-        /* NEW: Video Section Styling */
+        /* Video Section Styling */
         .video-section {
             width: 100%;
             max-width: 800px;
@@ -118,7 +135,7 @@
 
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            padding-bottom: 56.25%; 
             height: 0;
             overflow: hidden;
             margin-bottom: 20px;
@@ -171,6 +188,7 @@
         @media (max-width: 480px) {
             .brand-name { font-size: 1.6rem; }
             .service-card h2 { font-size: 1.1rem; }
+            .call-btn, .whatsapp-btn { width: 100%; } /* Stack buttons on very small screens */
         }
     </style>
 </head>
@@ -181,7 +199,10 @@
         
         <div class="phone-section">
             <span class="phone-number">600 248 4970</span>
-            <a href="tel:6002484970" class="call-btn">📞 CALL NOW</a>
+            <div class="btn-group">
+                <a href="tel:6002484970" class="call-btn">📞 CALL NOW</a>
+                <a href="https://wa.me/916002484970" class="whatsapp-btn">💬 WHATSAPP</a>
+            </div>
         </div>
 
         <div class="services-container">
@@ -192,12 +213,12 @@
 
             <div class="service-card">
                 <h2>2. Experienced Technicians</h2>
-                <p>Be it Engine, AC or Steering; Volkswagen, Renault or Ford. Our mechanics are capable of solving any complex problems and delivering the highest quality car performance.</p>
+                <p>Engine, AC, or Steering. Volkswagen, Renault, or Ford. No challenge is too complex for our experts. We restore precision. we deliver top car performance.</p>
             </div>
 
             <div class="service-card">
                 <h2>3. Transparent Pricing</h2>
-                <p>All the parts and labour charges are fixed and communicated upfront to avoid any surprises. The prices are benchmarked against the market, including local players and OEM service centers.</p>
+                <p>Zero guesswork. Zero hidden costs. We provide 100% upfront pricing on parts and labor, benchmarked to beat the big showrooms while crushing the local competition in value. What we quote is what you pay—every single time.</p>
             </div>
         </div>
 
@@ -216,6 +237,7 @@
                 <iframe src="https://www.youtube.com/embed/CuvYcv0npLY" allowfullscreen></iframe>
             </div>
         </div>
+
         <div class="location-box">
             <p class="address">
                 <strong>VIP Chowk</strong><br>
