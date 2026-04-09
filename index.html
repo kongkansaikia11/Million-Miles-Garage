@@ -32,10 +32,19 @@
             min-height: 100vh;
         }
 
+        /* NEW: Logo Styling for Mobile */
+        .logo-image {
+            width: 100%;
+            max-width: 250px; /* Adjust this to make your logo larger or smaller */
+            height: auto;
+            margin-top: 20px;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5));
+        }
+
         .brand-name {
             font-family: 'Orbitron', sans-serif;
             font-size: 2.2rem;
-            margin-top: 20px;
+            margin-top: 15px;
             color: var(--text-light);
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -188,13 +197,16 @@
         @media (max-width: 480px) {
             .brand-name { font-size: 1.6rem; }
             .service-card h2 { font-size: 1.1rem; }
-            .call-btn, .whatsapp-btn { width: 100%; } /* Stack buttons on very small screens */
+            .call-btn, .whatsapp-btn { width: 100%; } 
+            .logo-image { max-width: 200px; } /* Slightly smaller logo on very small phones */
         }
     </style>
 </head>
 <body>
 
     <div class="container">
+        <img src="MMG DOGE.png" alt="Million Miles Garage Logo" class="logo-image">
+
         <h1 class="brand-name">Million Miles Garage</h1>
         
         <div class="phone-section">
