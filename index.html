@@ -10,8 +10,8 @@
             --main-bg: #1a1a1a;
             --accent-color: #e63946; /* Professional Red */
             --text-light: #f1f1f1;
-            --button-green: #2ecc71; /* Call Button */
-            --whatsapp-green: #25d366; /* Official WhatsApp Green */
+            --button-green: #2ecc71; 
+            --whatsapp-green: #25d366; 
             --card-bg: rgba(255, 255, 255, 0.05);
         }
 
@@ -32,19 +32,30 @@
             min-height: 100vh;
         }
 
-        /* NEW: Logo Styling for Mobile */
+        /* UPDATED: Stylish Logo Boundary */
         .logo-image {
             width: 100%;
-            max-width: 250px; /* Adjust this to make your logo larger or smaller */
+            max-width: 180px; /* Sized for mobile clarity */
             height: auto;
-            margin-top: 20px;
-            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5));
+            margin-top: 30px;
+            padding: 10px; /* Space between logo and boundary */
+            border: 2px solid var(--accent-color);
+            border-radius: 20% 5% 20% 5%; /* Unique asymmetric technical cut */
+            background: rgba(230, 57, 70, 0.05); /* Very subtle red tint background */
+            box-shadow: 0 0 15px rgba(230, 57, 70, 0.4), inset 0 0 10px rgba(230, 57, 70, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .logo-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(230, 57, 70, 0.6);
+            border-radius: 5% 20% 5% 20%; /* Border shifts on hover */
         }
 
         .brand-name {
             font-family: 'Orbitron', sans-serif;
             font-size: 2.2rem;
-            margin-top: 15px;
+            margin-top: 20px;
             color: var(--text-light);
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -198,7 +209,7 @@
             .brand-name { font-size: 1.6rem; }
             .service-card h2 { font-size: 1.1rem; }
             .call-btn, .whatsapp-btn { width: 100%; } 
-            .logo-image { max-width: 200px; } /* Slightly smaller logo on very small phones */
+            .logo-image { max-width: 150px; } 
         }
     </style>
 </head>
