@@ -8,11 +8,12 @@
     <style>
         :root {
             --main-bg: #1a1a1a;
-            --accent-color: #e63946; /* Professional Red */
+            --accent-color: #e63946; 
             --text-light: #f1f1f1;
             --button-green: #2ecc71; 
             --whatsapp-green: #25d366; 
             --card-bg: rgba(255, 255, 255, 0.05);
+            --border-silver: #444; /* Professional metallic grey */
         }
 
         body {
@@ -32,51 +33,55 @@
             min-height: 100vh;
         }
 
-        /* UPDATED: Stylish Logo Boundary */
-        .logo-image {
+        /* REFINED: Large Professional Logo Frame */
+        .logo-wrapper {
+            margin-top: 40px;
+            margin-bottom: 10px;
             width: 100%;
-            max-width: 180px; /* Sized for mobile clarity */
-            height: auto;
-            margin-top: 30px;
-            padding: 10px; /* Space between logo and boundary */
-            border: 2px solid var(--accent-color);
-            border-radius: 20% 5% 20% 5%; /* Unique asymmetric technical cut */
-            background: rgba(230, 57, 70, 0.05); /* Very subtle red tint background */
-            box-shadow: 0 0 15px rgba(230, 57, 70, 0.4), inset 0 0 10px rgba(230, 57, 70, 0.2);
-            transition: all 0.3s ease;
+            max-width: 280px; /* Larger presence */
+            position: relative;
         }
 
-        .logo-image:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 25px rgba(230, 57, 70, 0.6);
-            border-radius: 5% 20% 5% 20%; /* Border shifts on hover */
+        .logo-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            padding: 15px;
+            border: 1px solid var(--border-silver); /* Clean minimalist border */
+            border-radius: 12px; /* Subtle rounded corners for a modern look */
+            background: linear-gradient(145deg, #222, #111); /* Subtle depth */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
         .brand-name {
             font-family: 'Orbitron', sans-serif;
             font-size: 2.2rem;
-            margin-top: 20px;
+            margin-top: 25px;
             color: var(--text-light);
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            display: inline-block;
         }
 
         /* Phone & Action Section */
         .phone-section {
-            margin: 25px 0;
+            margin: 35px 0;
             width: 100%;
         }
 
         .phone-number {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             display: block;
             margin-bottom: 20px;
+            color: var(--accent-color);
         }
 
         .btn-group {
             display: flex;
-            gap: 10px;
+            gap: 15px;
             justify-content: center;
             flex-wrap: wrap;
         }
@@ -84,180 +89,98 @@
         .call-btn, .whatsapp-btn {
             color: white;
             text-decoration: none;
-            padding: 15px 30px;
+            padding: 18px 35px;
             font-size: 1.1rem;
             font-weight: bold;
-            border-radius: 50px;
+            border-radius: 8px; /* Squared off for a more "industrial/pro" feel */
             display: inline-block;
-            transition: transform 0.2s;
-            min-width: 160px;
+            transition: all 0.3s ease;
+            min-width: 180px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .call-btn {
             background-color: var(--button-green);
-            box-shadow: 0 4px 10px rgba(46, 204, 113, 0.3);
         }
 
         .whatsapp-btn {
             background-color: var(--whatsapp-green);
-            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
         }
 
-        .call-btn:active, .whatsapp-btn:active {
-            transform: scale(0.95);
+        .call-btn:hover, .whatsapp-btn:hover {
+            filter: brightness(1.1);
+            transform: translateY(-2px);
         }
 
         /* Services Section */
         .services-container {
             width: 100%;
             max-width: 800px;
-            margin: 30px 0;
+            margin: 40px 0;
             text-align: left;
         }
 
         .service-card {
             background: var(--card-bg);
-            padding: 20px;
-            border-radius: 12px;
+            padding: 25px;
+            border-radius: 4px; /* Clean, professional sharp edges */
             margin-bottom: 20px;
-            border-left: 4px solid var(--accent-color);
-            transition: background 0.3s;
+            border-left: 5px solid var(--accent-color);
         }
 
         .service-card h2 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             margin-top: 0;
-            color: var(--accent-color);
-            text-transform: uppercase;
-        }
-
-        .service-card p {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #ccc;
-            margin-bottom: 0;
-        }
-
-        /* Video Section Styling */
-        .video-section {
-            width: 100%;
-            max-width: 800px;
-            margin: 40px 0;
-        }
-
-        .video-section h2 {
-            font-family: 'Orbitron', sans-serif;
             color: var(--text-light);
-            margin-bottom: 25px;
             text-transform: uppercase;
         }
 
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; 
-            height: 0;
-            overflow: hidden;
-            margin-bottom: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        /* Location Box */
-        .location-box {
-            background: var(--card-bg);
-            padding: 20px;
-            border-radius: 12px;
-            margin-top: 10px;
-            width: 90%;
-            max-width: 800px;
-            border-left: 4px solid var(--text-light);
-        }
-
-        .address {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #ccc;
-        }
-
-        .map-link {
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 15px;
-            display: inline-block;
-            border-bottom: 1px solid var(--accent-color);
-        }
-
-        footer {
-            margin-top: 40px;
-            padding: 20px;
-            font-size: 0.8rem;
-            color: #666;
-        }
+        /* Video & Other Styles remain same... */
+        .video-section { width: 100%; max-width: 800px; margin: 40px 0; }
+        .video-section h2 { font-family: 'Orbitron', sans-serif; margin-bottom: 25px; text-transform: uppercase; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+        .location-box { background: var(--card-bg); padding: 25px; border-radius: 8px; margin-top: 10px; width: 90%; max-width: 800px; border-top: 2px solid var(--border-silver); }
+        .map-link { color: var(--accent-color); text-decoration: none; font-weight: bold; margin-top: 15px; display: inline-block; border-bottom: 1px solid var(--accent-color); }
+        footer { margin-top: 40px; padding: 20px; font-size: 0.8rem; color: #666; }
 
         @media (max-width: 480px) {
-            .brand-name { font-size: 1.6rem; }
-            .service-card h2 { font-size: 1.1rem; }
-            .call-btn, .whatsapp-btn { width: 100%; } 
-            .logo-image { max-width: 150px; } 
+            .brand-name { font-size: 1.4rem; letter-spacing: 1px; }
+            .logo-wrapper { max-width: 220px; } /* Large but fits small screens */
+            .call-btn, .whatsapp-btn { width: 100%; min-width: unset; }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <img src="Logo.png" alt="Million Miles Garage Logo" class="logo-image">
+        <div class="logo-wrapper">
+            <img src="Logo.png" alt="Million Miles Garage Logo" class="logo-image">
+        </div>
 
         <h1 class="brand-name">Million Miles Garage</h1>
         
         <div class="phone-section">
             <span class="phone-number">600 248 4970</span>
             <div class="btn-group">
-                <a href="tel:6002484970" class="call-btn">📞 CALL NOW</a>
-                <a href="https://wa.me/916002484970" class="whatsapp-btn">💬 WHATSAPP</a>
+                <a href="tel:6002484970" class="call-btn">CALL NOW</a>
+                <a href="https://wa.me/916002484970" class="whatsapp-btn">WHATSAPP</a>
             </div>
         </div>
 
         <div class="services-container">
             <div class="service-card">
                 <h2>1. Precision Technical Diagnostics</h2>
-                <p>Don't guess, diagnose. We use advanced ECU scanning technology to read live sensor data, check injector timing, and monitor coolant temperatures in real-time. We find the fault before we touch a wrench.</p>
+                <p>We use advanced ECU scanning technology to read live sensor data, check injector timing, and monitor coolant temperatures in real-time. We find the fault before we touch a wrench.</p>
             </div>
-
-            <div class="service-card">
-                <h2>2. Experienced Technicians</h2>
-                <p>Engine, AC, or Steering. Volkswagen, Renault, or Ford. No challenge is too complex for our experts. We restore precision. we deliver top car performance.</p>
             </div>
-
-            <div class="service-card">
-                <h2>3. Transparent Pricing</h2>
-                <p>Zero guesswork. Zero hidden costs. We provide 100% upfront pricing on parts and labor, benchmarked to beat the big showrooms while crushing the local competition in value. What we quote is what you pay—every single time.</p>
-            </div>
-        </div>
 
         <div class="video-section">
             <h2>Our Work In Action</h2>
-            
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/wiWT36-FJVM" allowfullscreen></iframe>
-            </div>
-
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/UsqvaDrRYao" allowfullscreen></iframe>
-            </div>
-
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/CuvYcv0npLY" allowfullscreen></iframe>
             </div>
         </div>
 
