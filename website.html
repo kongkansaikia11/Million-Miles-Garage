@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TSBJ2EPGZL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TSBJ2EPGZL');
+</script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Million Miles Garage | Guwahati</title>
@@ -8,9 +19,12 @@
     <style>
         :root {
             --main-bg: #1a1a1a;
-            --accent-color: #e63946; /* Professional Red */
+            --accent-color: #e63946; 
             --text-light: #f1f1f1;
-            --button-green: #2ecc71;
+            --button-green: #2ecc71; 
+            --whatsapp-green: #25d366; 
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --border-silver: #444; /* Professional metallic grey */
         }
 
         body {
@@ -30,94 +44,214 @@
             min-height: 100vh;
         }
 
-        /* Headline 1 Styling */
+        /* REFINED: Large Professional Logo Frame */
+        .logo-wrapper {
+            margin-top: 40px;
+            margin-bottom: 10px;
+            width: 100%;
+            max-width: 280px; /* Larger presence */
+            position: relative;
+        }
+
+        .logo-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            padding: 15px;
+            border: 1px solid var(--border-silver); /* Clean minimalist border */
+            border-radius: 12px; /* Subtle rounded corners for a modern look */
+            background: linear-gradient(145deg, #222, #111); /* Subtle depth */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
         .brand-name {
             font-family: 'Orbitron', sans-serif;
             font-size: 2.2rem;
-            margin-top: 20px;
+            margin-top: 25px;
             color: var(--text-light);
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            display: inline-block;
         }
 
-        .creative-image {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-        }
-
-        /* Headline 2 Styling */
+        /* Phone & Action Section */
         .phone-section {
-            margin: 25px 0;
+            margin: 35px 0;
             width: 100%;
         }
 
         .phone-number {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             display: block;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .call-btn, .whatsapp-btn {
+            color: white;
+            text-decoration: none;
+            padding: 18px 35px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 8px; /* Squared off for a more "industrial/pro" feel */
+            display: inline-block;
+            transition: all 0.3s ease;
+            min-width: 180px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .call-btn {
             background-color: var(--button-green);
-            color: white;
-            text-decoration: none;
-            padding: 18px 40px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            border-radius: 50px;
-            display: inline-block;
-            transition: transform 0.2s;
-            box-shadow: 0 4px 10px rgba(46, 204, 113, 0.3);
         }
 
-        .call-btn:active {
-            transform: scale(0.95);
+        .whatsapp-btn {
+            background-color: var(--whatsapp-green);
         }
 
-        /* Headline 3 Styling */
-        .location-box {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 20px;
-            border-radius: 12px;
-            margin-top: 20px;
-            width: 90%;
-            border-left: 4px solid var(--accent-color);
+        .call-btn:hover, .whatsapp-btn:hover {
+            filter: brightness(1.1);
+            transform: translateY(-2px);
         }
 
-        .address {
-            font-size: 1.1rem;
+        /* Services Section */
+        .services-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 40px 0;
+            text-align: left;
+        }
+
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            color: var(--text-light);
+            letter-spacing: 1.5px;
+            text-align: center;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 4px; /* Clean, professional sharp edges */
+            margin-bottom: 20px;
+            border-left: 5px solid var(--accent-color);
+        }
+
+        .service-card h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.3rem;
+            margin-top: 0;
+            color: var(--text-light);
+            text-transform: uppercase;
+        }
+
+        .service-card p {
             line-height: 1.6;
-            color: #ccc;
+            margin-bottom: 0;
         }
 
-        .map-link {
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 15px;
-            display: inline-block;
-            border-bottom: 1px solid var(--accent-color);
-        }
+        /* Video & Other Styles remain same... */
+        .video-section { width: 100%; max-width: 800px; margin: 40px 0; }
+        .video-section h2 { font-family: 'Orbitron', sans-serif; margin-bottom: 25px; text-transform: uppercase; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+        .location-box { background: var(--card-bg); padding: 25px; border-radius: 8px; margin-top: 10px; width: 90%; max-width: 800px; border-top: 2px solid var(--border-silver); }
+        .map-link { color: var(--accent-color); text-decoration: none; font-weight: bold; margin-top: 15px; display: inline-block; border-bottom: 1px solid var(--accent-color); }
+        footer { margin-top: 40px; padding: 20px; font-size: 0.8rem; color: #666; }
 
-        footer {
-            margin-top: auto;
-            padding: 20px;
-            font-size: 0.8rem;
-            color: #666;
+        @media (max-width: 480px) {
+            .brand-name { font-size: 1.4rem; letter-spacing: 1px; }
+            .logo-wrapper { max-width: 220px; } /* Large but fits small screens */
+            .call-btn, .whatsapp-btn { width: 100%; min-width: unset; }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
+        <div class="logo-wrapper">
+            <img src="Logo.png" alt="Million Miles Garage Logo" class="logo-image">
+        </div>
+
         <h1 class="brand-name">Million Miles Garage</h1>
+        
         <div class="phone-section">
             <span class="phone-number">600 248 4970</span>
-            <a href="tel:6002484970" class="call-btn">📞 CALL NOW</a>
+            <div class="btn-group">
+                <a href="tel:6002484970" class="call-btn">CALL NOW</a>
+                <a href="https://wa.me/916002484970" class="whatsapp-btn">WHATSAPP</a>
+            </div>
+        </div>
+
+        <div class="services-container">
+            <div class="service-card">
+                <h2>1. Precision Technical Diagnostics</h2>
+                <p>Don't guess, diagnose. We use advanced ECU scanning technology to read live sensor data, check injector timing, and monitor coolant temperatures in real-time. We find the fault before we touch a wrench.</p>
+            </div>
+
+            <div class="service-card">
+                <h2>2. Experienced Mechanics</h2>
+                <p>Engine, AC or Steering. Volkswagen, Renault, or Ford. No challenge is too complex for our experts. We restore precision. we deliver top car performance.</p>
+            </div>
+
+            <div class="service-card">
+                <h2>3. Transparent Pricing</h2>
+                <p>Zero guesswork. Zero hidden costs. We provide 100% upfront pricing on parts and labor, benchmarked to beat the big showrooms while crushing the local competition in value. What we quote is what you pay—every single time.</p>
+            </div>
+        </div>
+
+        <!-- NEW SERVICES SECTION ADDED DIRECTLY ABOVE 'OUR WORK IN ACTION' -->
+        <div class="services-container">
+            <h2 class="section-title">Our Repair & Maintenance Services</h2>
+
+            <div class="service-card">
+                <h2>1. Car Electrical Work</h2>
+                <p>We combine advanced diagnostic scanners with expert troubleshooting to identify complex electrical glitches. From starter motor overhauls and alternator repairs to battery testing and wiring harness fixes, we keep your vehicle’s power systems running flawlessly.</p>
+            </div>
+
+            <div class="service-card">
+                <h2>2. Air Conditioning Repair & Servicing</h2>
+                <p>Stay cool with complete HVAC care. Our AC services cover nitrogen pressure leak testing, precision refrigerant gas refilling, compressor repairs, and cooling coil replacements to restore ice-cold cabin temperatures.</p>
+            </div>
+
+            <div class="service-card">
+                <h2>3. Mechanical Work</h2>
+                <p>Engine overhauls, clutch replacements, and complete suspension rebuilds—our master mechanics handle heavy-duty mechanical repairs. We eliminate highway vibrations, fix steering slop, and bring back smooth handling.</p>
+            </div>
+
+            <div class="service-card">
+                <h2>4. Car Accessories & Tech Upgrades</h2>
+                <p>Upgrade your driving experience with modern retrofits. We provide seamless installations for Android touchscreens, high-definition reverse cameras, dual-channel dashcams, and accessory wiring without compromising OEM electrical safety.</p>
+            </div>
+        </div>
+        
+        <div class="video-section">
+            <h2>Our Work In Action</h2>
+            
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/wiWT36-FJVM" allowfullscreen></iframe>
+            </div>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/UsqvaDrRYao" allowfullscreen></iframe>
+            </div>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/CuvYcv0npLY" allowfullscreen></iframe>
+            </div>
         </div>
 
         <div class="location-box">
@@ -126,11 +260,11 @@
                 Near Guwahati Airport<br>
                 Pincode 781015
             </p>
-            <a href="https://maps.app.goo.gl/tPfnAWZeTJoYWcKQ8" class="map-link">📍 Open in Google Maps</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Million+Miles+Garage+VIP+Chowk+Guwahati" class="map-link">📍 Open in Google Maps</a>
         </div>
 
         <footer>
-            &copy; 2026 Million Miles Garage | Professional Car Diagnostics
+            © 2026 Million Miles Garage | Professional Car Diagnostics
         </footer>
     </div>
 
